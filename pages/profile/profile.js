@@ -1,43 +1,18 @@
-// pages/home/home.js
+// pages/profile/profile.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    name:'wangmanong',
-    age:20,
-    students:[
-      {id:1,name:'111',age:20},
-      {id:2,name:'222',age:21},
-      {id:3,name:'333',age:22},
-      {id:4,name:'444',age:23},
-      {id:5,name:'555',age:24}
-    ],
-    counter:0
+
   },
-  btnClick(){
-    //界面不会刷新
-    // this.data.counter +=1
-    // console.log(this.data.counter)
-    this.setData({
-      counter:this.data.counter + 1
-    })
-  },
-  btnjClick(){
-    this.setData({
-      counter:this.data.counter - 1
-    })
-  },
-  //编程范式
-  //命令式编程：原生操作DOM
-  //声明式编程：Vue/React/Angular
-  
+
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-   
+
   },
 
   /**
