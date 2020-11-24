@@ -1,3 +1,13 @@
 <!--pages/home/home.wxml-->
 <view>我是首页</view>
-<button open-type="getUserInfo" size="mini">按钮</button>
+<!-- 获取用户信息方法二 -->
+<button open-type="getUserInfo" size="mini" bindgetuserinfo="getInfo">获取授权</button>
+
+<!-- 展示用户信息 -->
+<open-data type="userNickName"></open-data>
+<open-data type="userAvatarUrl"></open-data>
+
+<view bindtap="bandleViewClick">{{message}}</view>
+
+<!-- 接口数据列表展示 -->
+<view wx:for="{{list}}">{{item.title}}</view>
