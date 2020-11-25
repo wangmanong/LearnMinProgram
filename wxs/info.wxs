@@ -1,0 +1,10 @@
+var message = "Hello World";
+var name = "王芹";
+function sum (sum1,sum2){
+  return sum1 + sum2
+}
+module.exports = {
+  message:message,
+  name:name,
+  sum:sum
+}

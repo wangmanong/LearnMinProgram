@@ -1,0 +1,27 @@
+<!--pages/wxs/wxs.wxml-->
+<!-- wxs定义方式 -->
+<!-- 1.在WXML中直接使用wxs -->
+<!-- <wxs module="info">
+  var message = "Hello World";
+  var name = "王芹";
+  function sum (sum1,sum2){
+    return sum1 + sum2
+  };
+  module.exports = {
+    message:message,
+    name:name,
+    sum:sum
+  }
+</wxs> -->
+
+<!-- 2. 定义在单独的WXS文件中，再使用<wxs>标签进行导入 -->
+<!-- 引入是只能使用相对路径 -->
+<wxs src="../../wxs/info.wxs" module="info"></wxs>
+<view>{{info.message}}</view>
+<view>{{info.name}}</view>
+<view>{{info.sum(10,39)}}</view>
+
+<!-- 3.wxs应用 -->
+<wxs src="../../wxs/format.wxs" module="format"></wxs>
+<view >{{format.priceFormat(price)}}</view>
+<view>{{format.dateFormat(time)}}</view>
