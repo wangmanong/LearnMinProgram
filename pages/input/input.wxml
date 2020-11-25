@@ -1,0 +1,20 @@
+<!--pages/input/input.wxml-->
+<!-- 1.type的基本使用 -->
+<input />
+<!-- 2.value属性 -->
+<input value="哈哈哈哈哈" />
+
+<!-- type属性 -->
+<input type="text" />
+
+<!-- 4.password:暗文 -->
+<input password />
+
+<!-- 5.placeholder:占位 -->
+<input placeholder="请输入文字" />
+
+<!-- 6.confirm-type：设置键盘右下角显示的文字 -->
+<!-- <input confirm-type="search" /> -->
+
+<!-- 7.input绑定事件 -->
+<input bindinput="handleInput" bindfocus="handleFocus" bindblur="handleBlur"/>

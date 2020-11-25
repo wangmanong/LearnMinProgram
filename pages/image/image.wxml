@@ -1,0 +1,27 @@
+<!--pages/image/image.wxml-->
+<!-- 1.image的基本使用 -->
+<!-- image组件可以写成单标签，也可以写成双标签 -->
+<!-- image组件默认有自己的大小 -->
+<!-- <image /> -->
+
+<!-- 2.src属性:本地路径（相对路径/绝对路径）/远程地址 -->
+<image src="../../assets/img/mao.jpg"></image>
+<image src="/assets/img/mao.jpg"></image>
+<image src="https://res.wx.qq.com/wxdoc/dist/assets/img/0.4cb08bb4.jpg"></image>
+
+<!-- 3.补充：显示相册里的图片 -->
+<button bindtap="handleChoose">选中图片</button>
+<image src="{{imgPath.path}}"></image>
+
+<!-- 4.bindload:监听图片加载完成 -->
+<!-- lazy-load:图片懒加载 -->
+<view>------------------------------------------</view>
+<image 
+  wx:for="{{1}}" 
+  src="https://res.wx.qq.com/wxdoc/dist/assets/img/0.4cb08bb4.jpg" 
+  bindload="handleImgLoad" lazy-load>
+</image>
+
+<!-- 5.show-menu-by-longpress:长按图片出现识别小程序码 -->
+<image src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1606299817634&di=d20d48925143db4e4b206d29afe6ea62&imgtype=0&src=http%3A%2F%2Fa3.att.hudong.com%2F55%2F22%2F20300000929429130630222900050.jpg" 
+show-menu-by-longpress></image>
