@@ -1,0 +1,10 @@
+<!--pages/wxss/wxss.wxml-->
+<!-- 设置样式的三种方式 -->
+<!-- 1.行内（内联）样式 -->
+<view style="color:red;font-size:30px">哈哈哈哈哈</view>
+
+<!-- 2.业内样式 -->
+<view class="box1">呵呵呵呵呵额和</view>
+
+<!-- 3.全局样式 -->
+<view class="container">嘿嘿嘿嘿嘿</view>
