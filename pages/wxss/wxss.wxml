@@ -8,3 +8,7 @@
 
 <!-- 3.全局样式 -->
 <view class="container">嘿嘿嘿嘿嘿</view>
+
+<!-- 4.wxss中的单位：rpx -->
+<view class="box2">你好</view>
+<view class="box3">你好</view>

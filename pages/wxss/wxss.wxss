@@ -1,4 +1,17 @@
 /* pages/wxss/wxss.wxss */
+@import './style/box2.wxss';
+@import './style/box3.wxss';
+
 .box1{
   color: blue;
 }
+/* .box2{
+  width: 100px;
+  height: 100px;
+  background-color: green;
+} */
+/* .box3{
+  width: 200rpx;
+  height: 200rpx;
+  background-color: red;
+} */

@@ -1,0 +1,64 @@
+<!--pages/wxml/wxml.wxml-->
+<!-- 1.wxml的格式 -->
+<view></view>
+
+<!-- 2.Mustache语法 -->
+<view>{{message}}</view>
+<view>{{firstname}}{{lastname}}</view>
+<view>{{firstname + lastname}}</view>
+<view>{{age >= 18 ? '成年人' : '未成年'}}</view>
+
+<!-- 3.显示当前时间 -->
+<view>{{nowTime}}</view>
+
+<button bindtap="btnClick">切换颜色</button>
+<view class="ha {{isActive ? 'active' : ''}}">哈哈哈哈哈哈</view>
+
+<!--4. 条件判断 -->
+<view>----------------条件判断---------------</view>
+<!-- wx:if -->
+<button bindtap="showClick">切换显示</button>
+<view wx:if="{{isShow}}">hahahahhaha</view>
+<!-- wx:if/wx:elif -->
+<button bindtap="scoreClick">分数改变</button>
+<view wx:if="{{score >= 90}}">优秀</view>
+<view wx:elif="{{score >= 80}}">良好</view>
+<view wx:elif="{{score >= 60}}">及格</view>
+<view wx:else>不及格</view>
+<view>{{score}}</view>
+
+<!--5. hidden属性 -->
+<view hidden="{{true}}">我是hidden属性控制的内容1</view>
+<view hidden="{{false}}">我是hidden属性控制的内容2</view>
+<view wx:if="{{isShow}}">我是hidden属性控制的内容3</view>
+
+<!-- 6.wx:for 变量渲染-->
+<!-- 遍历数组/字符串/数字 -->
+<view wx:for="{{['王芹','王芳','王铠']}}">{{item}}</view>
+<!-- <view wx:for="{{10}}">{{index}}----{{item}}</view> -->
+
+<!-- 7.block -->
+<block wx:if="{{isShow}}">
+  <button>按钮</button>
+  <view>哈哈哈哈</view>
+  <text>我是内容</text>
+</block>
+<!-- 8.给item /index 起别名 -->
+<!-- <view wx:for="{{movies}}" wx:for-item="movie">{{movie}}</view> -->
+
+<!-- 9.key的作用 -->
+<view wx:for="{{['111','222','333']}}" wx:key="{{item}}">{{item}}</view>
+
+<!-- 10.template -->
+<view>----------template---------</view>
+<!-- 模板中包裹的内容在没有使用前是不进行渲染的 -->
+<!-- <template name="contentItem">
+  <button>{{btnText}}</button>
+  <view>{{content}}</view>
+</template> -->
+<import src="../../wxml/wxml.wxml"/>
+<import src="/wxml/abc.wxml"/>
+<template is="contentItem" data="{{btnText:'按钮',content:'哈哈哈哈哈'}}"/>
+<template is="contentItem" data="{{btnText:'警告',content:'呵呵呵呵额呵呵'}}"/>
+<template is="contentItem" data="{{btnText:'点击',content:'嘿嘿嘿嘿嘿'}}"/>
+<template is="abc"></template>
