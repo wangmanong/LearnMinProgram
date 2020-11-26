@@ -1,0 +1,2 @@
+<!--components/my-select/my-select.wxml-->
+<view>当前组件内的数字是：{{nums}}</view>

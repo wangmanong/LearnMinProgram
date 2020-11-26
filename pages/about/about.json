@@ -1,3 +1,6 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+    "my-tab-control":"/components/my-tab-control/my-tab-control",
+    "my-slots":"/components/my-slots/my-slots"
+  }
 }

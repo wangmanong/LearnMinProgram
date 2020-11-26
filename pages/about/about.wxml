@@ -1,2 +1,9 @@
 <!--pages/about/about.wxml-->
-<text>pages/about/about.wxml</text>
+<my-tab-control titles="{{titles}}" active="active" bind:itemclick="handleItemClick"/>
+
+<!-- 多个插槽的使用 -->
+<my-slots>
+  <button size="mini" slot="slots2">我是插槽2的按钮</button>
+  <view slot="slots1">我是插槽1的内容</view>
+  <slider slot="slots3"></slider>
+</my-slots>

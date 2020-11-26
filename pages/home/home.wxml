@@ -1,3 +1,38 @@
 <!--pages/home/home.wxml-->
 <text class="title">Hello World</text>
 <button size="mini">按钮</button>
+
+<!-- 1.自定义组件的基本使用 -->
+<!-- <my-cpn></my-cpn>
+<my-cpn/> -->
+
+<!-- 自定义组件的样式说明 -->
+<!-- <my-style></my-style> -->
+
+<!-- 给自定义组件传递数据/样式 -->
+<my-prop title="哈哈哈哈" titleclass="red"/>
+<my-prop title="呵呵呵呵呵" titleclass="green"/>
+<my-prop titleclass="blue"/>
+
+<!-- 组件内部发出事件 -->
+<view>当前数字：{{counter}}</view>
+<my-event bind:btnclick="handleBtnClick"/>
+
+<!-- 直接选中组件修改数据/调用方法 -->
+<button bind:tap="handleBtnNums">修改组件内的数据</button>
+<my-select id="sel-id" />
+
+<!-- 插槽的使用 -->
+<!-- 单个插槽的使用 -->
+<view>--------------插槽的使用--------------------</view>
+<my-slot>
+  <button size="mini">我是插槽插入的按钮</button>
+</my-slot>
+<my-slot>
+  <image src="https://res.wx.qq.com/wxdoc/dist/assets/img/0.4cb08bb4.jpg"></image>
+</my-slot>
+<my-slot>
+  <!-- 进度条 -->
+  <slider value="30"></slider>
+</my-slot>
+

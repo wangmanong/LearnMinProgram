@@ -1,0 +1,2 @@
+<!--components/my-event/my-event.wxml-->
+<button size="mini" bind:tap="btnClick">自定义组件按钮</button>
